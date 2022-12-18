@@ -1,0 +1,75 @@
+<html>
+    
+        <nav class="navbar bg-dark">
+        <h1><strong>Employee Database</strong></h1>
+        <button type="button" class="btn1 btn-outline-info" (click)="clickaddEmployee()" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa-solid fa-plus"></i>Add Employee</button>
+        </nav>
+        
+<table class="table mt-0">
+    <thead>
+      <tr>
+        <th scope="col">Employee ID</th>
+        <th scope="col">First Name</th>
+        <th scope="col">Last Name</th>
+        <th scope="col">Phone Number</th>
+        <th scope="col">Email Address</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of empList">
+        <td>{{employee.id}}</td>
+        <td>{{employee.fname}}</td>
+        <td>{{employee.lname}}</td>
+        <td>{{employee.phonenumber}}</td>
+        <td>{{employee.emailid}}</td>
+        <td>
+            <button type="button" class="btn3 btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editEmployeeDetails(employee)">Edit</button>
+            <button type="button" class="btn2 btn-outline-danger" (click)="deleteEmployeeDetails(employee)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!--Add Employee Modal Box-->
+  
+  <div class="modal" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Enter Employee Details</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form [formGroup]="empDetails" class="row g-3">
+                <div class="col-12">
+                    <label class="form-label">Employee Id: </label>
+                    <input type="text" formControlName="id" class="form-control"  placeholder="Enter your Employee I'd" id="id" required>
+                  </div>
+                <div class="col-md-6">
+                    <label class="form-label">First Name:  </label>
+                    <input type="text" formControlName="fname" placeholder="Enter First Name" class="form-control" id="fname" required minlength="4">
+                  </div>
+                  <div class="col-md-6">
+                    <label class="form-label"> Last Name: </label>
+                    <input type="text" formControlName="lname" placeholder="Enter Last Name" class="form-control" id="lname" required minlength="4">
+                  </div>
+                <div class="col-12">
+                  <label class="form-label">Email Address:  </label>
+                  <input type="email" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$" formControlName="emailid" placeholder="abc@gmail.com" class="form-control" id="emailid" validateEmail = true;>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Phone Number:  </label>
+                    <input type="text" placeholder="Enter your Phone Number" formControlName="phonenumber" class="form-control" id="phonenumber">
+                  </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="cancel" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" *ngIf="addEmployee" class="btn btn-primary" (click)="addEmployeeDetails()">Add Employee</button>
+          <button type="button" *ngIf="updateEmployee" class="btn btn-primary" (click)="updateEmployeeDetails()">UpdateEmployee</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </html>

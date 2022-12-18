@@ -1,0 +1,84 @@
+{
+  "employees": [
+    {
+      "id": 1,
+      "fname": "Krish",
+      "lname": "Lee",
+      "phonenumber": "123456",
+      "emailid": "krish.lee@learningcontainer.com"
+    },
+    {
+      "id": 2,
+      "fname": "racks",
+      "lname": "jacson",
+      "phonenumber": "123456",
+      "emailid": "racks.jacson@learningcontainer.com"
+    },
+    {
+      "id": 3,
+      "fname": "denial",
+      "lname": "roast",
+      "phonenumber": "33333333",
+      "emailid": "denial.roast@learningcontainer.com"
+    },
+    {
+      "id": 4,
+      "fname": "devid",
+      "lname": "neo",
+      "phonenumber": "222222222",
+      "emailid": "devid.neo@learningcontainer.com"
+    },
+    {
+      "id": "5",
+      "fname": "jone",
+      "lname": "mac",
+      "phonenumber": "111111111",
+      "emailid": "jone.mac@learningcontainer.com"
+    },
+    {
+      "id": "6",
+      "fname": "kesava",
+      "lname": "Reddy",
+      "phonenumber": "7624848079",
+      "emailid": "chennakesavapalem@gmail.com"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "id": "2",
+      "fname": "kesava",
+      "lname": "kesava",
+      "phonenumber": "1236547890",
+      "emailid": "chennakesavapalem@gmail.com"
+    },
+    {
+      "id": "3",
+      "fname": "Chenna",
+      "lname": "Kesava",
+      "phonenumber": "1234567893",
+      "emailid": "chennakesava@gmail.com"
+    },
+    {
+      "id": "6",
+      "fname": "kesava",
+      "lname": "kesava",
+      "phonenumber": "1236547890",
+      "emailid": "chenna@gmail.com"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
